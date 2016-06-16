@@ -29,6 +29,7 @@ class Oak_Video_Seo {
 
 		return self::$single_instance;
 	}
+
 	/**
 	 * Constructor
 	 *
@@ -129,8 +130,8 @@ class Oak_Video_Seo {
 	private function hooks() {
 		add_filter( 'wpseo_opengraph_image', 	array( __CLASS__, 'oak_opengraph_image' ), 5, 1 );
 		add_filter( 'wpseo_twitter_image', 		array( __CLASS__, 'oak_opengraph_image' ), 5, 1 );
-		global $wpseo_og;
 		if ( self::$src && ( 'youtube' === self::$src || 'vimeo' === self::$src ) ) {
+			global $wpseo_og;
 			remove_action( 'wpseo_opengraph', array( $wpseo_og, 'tags' ), 16 );
 			remove_action( 'wpseo_opengraph', array( $wpseo_og, 'category' ), 17 );
 			remove_action( 'wpseo_opengraph', array( $wpseo_og, 'publish_date' ), 19 );
