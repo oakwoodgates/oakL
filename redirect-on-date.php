@@ -4,6 +4,8 @@
  *
  * @since 0.0.1
  * @package WPGHF
+ * @author  https://github.com/oakwoodgates/
+ * @author  https://wpguru4u.com
  */
 class WPGHF_Redirects {
 	/**
